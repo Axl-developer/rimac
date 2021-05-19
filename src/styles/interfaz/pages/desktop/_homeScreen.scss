@@ -1,0 +1,62 @@
+.HomeScreen{
+    display: flex;
+}
+.HomeScreen__Right{
+    background-image: url('http://localhost:3000/assets/svgs/Mask_Group-1.svg');
+    background-size: cover;
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.HomeScreen__Greeting_Greet{
+    padding: 40px 64px 55px 32px;
+    color: #494F66;
+    max-width: 280px;
+
+    p{
+        margin-top: 12px;
+        line-height: 24px;
+        color: #676F8F;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+.HomeScreen__Greeting_New{
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+}
+.HomeScreen__Greeting_title{
+    font-size: 36px;
+    letter-spacing: -0.2px;
+    font-weight: 400;
+    line-height: 48px;
+
+    span{
+        color: #EF3340;
+    }
+}
+.HomeScreen__copyright{
+    color: #A3ABCC;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    position: absolute;
+    bottom: 40px;
+    left: 121px;
+}
+
+.HomeScreen__Left{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

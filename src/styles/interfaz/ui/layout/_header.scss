@@ -4,16 +4,42 @@
     align-items: center;
     justify-content: space-between;
 }
-
+.Header__left{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    span{
+        margin-right: 23px;
+        text-align: right;
+        letter-spacing: 0.2px;
+        color: #676F8F;
+    }
+}
 .Header__call{
-    color: #6769FF;
+    
     font-size: 14px;
     font-weight: 400;
     display: flex;
     align-items: center;
     text-decoration: none;
 
-    span{
+    .Header__callus{
         margin-left: 8px;
+        color: #6769FF;
+    }
+}
+.abosulte{
+    @extend .Header__call;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    justify-content: space-between;
+    padding:  24px 0px;
+    
+    #Header__logo{
+        padding-left: 120px;
+    }
+    .Header__call{
+        padding-right: 120px;
     }
 }

@@ -1,7 +1,8 @@
 .Form{
     padding: 40px 32px;
     margin: auto;
-    color:#676F8F
+    color:#676F8F;
+    max-width: 288px;
 }
 .Form__body{
     display: flex;
@@ -24,6 +25,12 @@
         outline: none;
     }
 }
+#Red{
+    border: 1px solid #EF3340 !important;
+    &::placeholder{
+        color: #EF3340;
+    }
+}
 .Form__Select_content{
     display: flex;
     border: 1px solid #C5CBE0;
@@ -43,6 +50,9 @@
     input{
         border-left: 1px solid #C5CBE0 !important;
         width: 100%;
+    }
+    #Red{
+        border-left: 1px solid #EF3340 !important;
     }
 }
 .Form__clear{
@@ -67,9 +77,12 @@
     span{
         font-size: 12px;
         line-height:20px;
-        letter-spacing:0.2 px
+        letter-spacing:0.2px
     }
 }
 .Form__Foot__Button{
     margin-top: 32px;
+}
+@media (min-width:1200px) {
+    
 }

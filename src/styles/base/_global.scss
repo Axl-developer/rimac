@@ -9,8 +9,17 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
+    letter-spacing: -0.2px;
+    
 }
 .External_link{
     color: #676F8F;
     font-weight: 500;
+}
+
+@media (min-width:1200px) {
+    .text_primary{
+        font-size: 28px;
+        line-height: 36px;
+    }
 }
