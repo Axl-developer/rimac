@@ -1,0 +1,18 @@
+.btn{
+    border: none;
+    background: none;
+}
+
+.btn_Primary{
+    @extend .btn;
+    background: #EF3340;
+    border-radius: 8px;
+    padding:20px 32px;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    
+    line-height: 0.8;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
