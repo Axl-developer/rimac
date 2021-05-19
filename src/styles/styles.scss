@@ -1,8 +1,10 @@
 @import './base/global';
 
 //Componentes
-@import './interfaz/pages/mobile/__mobileHome.scss';
+@import './interfaz/pages/mobile/__mobileHomeScreen.scss';
 
 //UI
 @import './interfaz/ui/exports/_form.scss';
 @import './interfaz/ui/exports/_buttons.scss';
+
+@import './interfaz/ui/layout/header';

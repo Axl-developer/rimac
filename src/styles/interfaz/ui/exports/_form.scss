@@ -12,9 +12,10 @@
     box-sizing: border-box;
     border-radius: 4px;
     margin: 0;
-    margin-top: 20px;
+    margin-top: 16px;
     padding: 16px;
     font-size: 16px;
+    height: 56px;
 
     &::placeholder{
         color: #A3ABCC;
@@ -27,7 +28,9 @@
     display: flex;
     border: 1px solid #C5CBE0;
     border-radius: 4px;
-    margin-top: 20px;
+    margin-top: 24px;
+    height: 56px;
+    
     
     .Form__input{
         margin: 0;
@@ -39,6 +42,7 @@
     }
     input{
         border-left: 1px solid #C5CBE0 !important;
+        width: 100%;
     }
 }
 .Form__clear{
@@ -52,14 +56,20 @@
 }
 .Form__Foot__check{
     display: flex;
-    margin-top: 20px;
+    margin-top: 24px;
     font-weight: 300;
 
     input{
         margin-top: 5px;
         margin-right: 17px;
     }
+
+    span{
+        font-size: 12px;
+        line-height:20px;
+        letter-spacing:0.2 px
+    }
 }
 .Form__Foot__Button{
-    margin-top: 20px;
+    margin-top: 32px;
 }
