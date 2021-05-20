@@ -3,9 +3,13 @@
 //Componentes
 @import './interfaz/pages/mobile/__mobileHomeScreen.scss';
 @import './interfaz/pages/desktop/homeScreen';
+@import './interfaz/pages/desktop/autoScreen';
 
 //UI
 @import './interfaz/ui/exports/_form.scss';
 @import './interfaz/ui/exports/_buttons.scss';
+@import './interfaz/ui/exports/progress';
+@import './interfaz/ui/exports/select';
+@import './interfaz/ui/exports/counter';
 
 @import './interfaz/ui/layout/header';

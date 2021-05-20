@@ -3,7 +3,8 @@ import { useState } from 'react';
 
 export const useForm = ( initialState = {} ) => {
     
-    const [values, setValues] = useState(initialState);
+    const [formValues, setValues] = useState(initialState);
+    const [NoVoid, setNoVoid] = useState(true)
 
     const reset = ( newFormState = initialState ) => {
         setValues( newFormState );
@@ -13,12 +14,20 @@ export const useForm = ( initialState = {} ) => {
     const handleInputChange = ({ target }) => {
 
         setValues({
-            ...values,
+            ...formValues,
             [ target.name ]: target.value
         });
 
     }
 
-    return [ values, handleInputChange, reset ];
+    const Checkout = () => {
+        
+        setNoVoid(false)
+        Object.entries(formValues).map( i => {
+            (i[1].length > 0) ? console.log('ok'):setNoVoid(true) 
+        })
+    }
+
+    return { formValues, handleInputChange, Checkout, NoVoid ,reset };
 
 }

@@ -43,3 +43,10 @@
         padding-right: 120px;
     }
 }
+.white{
+    @extend .Header__call;
+    justify-content: space-between;
+    padding:  20px 32px;
+    border-bottom: 1px solid #E4E8F7;
+    
+}

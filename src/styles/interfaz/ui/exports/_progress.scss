@@ -1,0 +1,34 @@
+.Progress{
+    padding: 12px 32px;
+    border-bottom: 1px solid #E4E8F7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span{
+        color: #676F8F;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+    }
+}
+
+.Progress__bar{
+    width: 176px;
+    height: 6px;
+    background: #E4E8F7;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #6F7DFF;
+        transform: translateX(-50%);
+    }
+}

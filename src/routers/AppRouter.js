@@ -10,6 +10,7 @@ import { isBrowser } from 'react-device-detect';
 
 import { MobileHomeScreen } from '../interfaz/pages/mobile/MobileHomeScreen';
 import { HomeScreen } from '../interfaz/pages/desktop/HomeScreen';
+import { AutoSceen } from '../interfaz/pages/desktop/auto/AutoSceen';
 
 export const AppRouter = () => {
     return (
@@ -20,8 +21,8 @@ export const AppRouter = () => {
                         (isBrowser)?<HomeScreen /> :<MobileHomeScreen />
                     }
                 </Route>
-                <Route exact path="/users">
-                    
+                <Route exact path="/auto">
+                    <AutoSceen />
                 </Route>
                 <Redirect to="/" />
             </Switch>
