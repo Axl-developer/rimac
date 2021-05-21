@@ -7,7 +7,6 @@ const inital = {
     num_phone:'',
     num_plate:''
 }
-console.log(inital)
 
 export const authReducer = (state = inital, action) => {
     switch (action.type) {

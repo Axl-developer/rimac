@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import { useCounter } from '../../../hooks/useCounter'
 
-export const Counter = () => {
-
-    const {count, add, subtract} = useCounter(14300)
+export const Counter = ({counter,setCounter}) => {
+    
+    const {counter:count, add, subtract} = useCounter(counter,setCounter)
     
     
-
     return (
         <div className="Counter">
             <button onClick={() => {subtract()}} className="btn">

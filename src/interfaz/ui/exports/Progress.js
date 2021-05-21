@@ -7,7 +7,7 @@ export const Progress = ({step}) => {
             <img src="/assets/svgs/back_arrow.svg" alt="arrow"/>
 
             <span>Paso {step} de 2</span>
-            <div className="Progress__bar"></div>
+            <div id={(step == 2)?'two':''} className="Progress__bar"></div>
         </div>
     )
 }

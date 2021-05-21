@@ -1,23 +1,19 @@
 import { useState } from "react"
 
 
-export const useCounter = (counter = 14300) => {
-    const [count, setCount] = useState(counter)
-
+export const useCounter = (counter = 14300,setCounter) => {
+    
     const add = (factor = 100,limit = 16500) => {
-        if(count < limit){
-            setCount(count + factor)
-        }else{
-            setCount(count)
+        if(counter < limit){
+            setCounter(counter + factor)
         }
         
     }
 
     const subtract = (factor = 100,limit = 12500) => {
-        if(count > limit){
-            setCount(count - factor)
+        if(counter > limit){
+            setCounter(counter - factor)
         }
     }
-
-    return { count, add, subtract };
+    return { counter, add, subtract };
 }

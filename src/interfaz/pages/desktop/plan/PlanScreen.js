@@ -8,6 +8,7 @@ import { Progress } from '../../../ui/exports/Progress'
 import { Select } from '../../../ui/exports/Select'
 import { Header } from '../../../ui/layout/Header'
 import { Sidebar } from '../../../ui/layout/Sidebar'
+import { Tabs } from '../../../ui/layout/Tabs'
 
 export const PlanScreen = () => {
 
@@ -45,10 +46,11 @@ export const PlanScreen = () => {
                     </div>
                 </div>
 
-                <div>
-                    <div>
+                <div className="AutoScreen_body">
+                    <div className="AutoScreen_coberturas">
                         <h2>Agrega o quita coberturas</h2>
                     </div>
+                    <Tabs />
                 </div>
 
             </div>

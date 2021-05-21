@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { isBrowser } from 'react-device-detect'
-import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { Link, useHistory } from 'react-router-dom'
+import { setDataAuto } from '../../../../actions/auto'
 import { Buttons } from '../../../ui/exports/Buttons'
 import { Counter } from '../../../ui/exports/Counter'
 import { Progress } from '../../../ui/exports/Progress'
@@ -10,13 +12,31 @@ import { Sidebar } from '../../../ui/layout/Sidebar'
 
 export const AutoSceen = () => {
 
+    const dispatch = useDispatch()
+
+    const history = useHistory()
+    
+    const {name} = useSelector(state => state.auth)
+
+    //datos para los selects
     const date = [2014,2015,2016,2017,2018,2019,2020,2021]
-
-    const [ValueDate, setValueDate] = useState(2020)
-
     const Brand = ["BMW","Mercedes-Benz","Audi","Lexus","Renault","Ford","Opel","Seat"]
 
+    //states de los selects
+    const [ValueDate, setValueDate] = useState(2020)
     const [ValueBrand, setValueBrand] = useState("Audi")
+
+    //state del contador
+    const [counter, setCounter] = useState(14300)
+
+    //state de los checkbox
+    const [gas, setGas] = useState(false)
+
+    const setData = () => {
+        dispatch(setDataAuto(ValueDate,ValueBrand,counter,gas))
+        history.push('/plan')
+    }
+
     return (
         <div>
             <Header question={true} white={true} />
@@ -42,7 +62,7 @@ export const AutoSceen = () => {
                                         </Link>
                         }
 
-                        <h1 className="AutoScreen_stepOne_title">¡Hola, {" "}<span>Juan!</span></h1>
+                        <h1 className="AutoScreen_stepOne_title">¡Hola, {" "}<span>{name}!</span></h1>
                         <p className="AutoScreen_stepOne_p">Completa los datos de tu auto</p>
 
                         <div className="AutoScreen_Options">
@@ -74,8 +94,8 @@ export const AutoSceen = () => {
                         <div className="AutoScreen_Question">
                             <span>¿Tu auto es a gas?</span>
                             <div className="AutoScreen_Question_answers">
-                                <input type="radio"/> <span>Sí</span>
-                                <input type="radio"/> <span>No</span>
+                                <input name="gas" onChange={() => setGas(!gas)} checked={(gas)?true:false} value={true} type="radio"/> <span>Sí</span>
+                                <input name="gas" onChange={() => setGas(!gas)} checked={(gas)?false:true} value={false} type="radio"/> <span>No</span>
                             </div>
                         </div>
 
@@ -90,12 +110,12 @@ export const AutoSceen = () => {
                             </div>
 
                             <div>
-                                <Counter />
+                                <Counter counter={counter} setCounter={setCounter} />
                             </div>
 
                         </div>
 
-                        <Buttons text="Continuar" arrow={true}/>
+                        <Buttons  text="Continuar" arrow={true} event={setData}/>
 
                     </div>
 
