@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export const Buttons = ({text,arrow = false,event}) => {
     return (
         <button onClick={(event)?event:''} className="btn_Primary">{text}
-            {(arrow) && <img src="/assets/svgs/rigth_arrow.svg" alt="arrow"/>}
+            {(arrow) && <img src="https://axl-developer.github.io/rimac//assets/svgs/rigth_arrow.svg" alt="arrow"/>}
         </button>
     )
 }

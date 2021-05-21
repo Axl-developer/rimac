@@ -18,7 +18,7 @@ export const MobileHomeScreen = () => {
                     </div>
                     
                     <div className="Mobile__Greeting_ContentImg">
-                        <img src="/assets/svgs/Ilustracion-mobile.svg" alt="greet"/>
+                        <img src="https://axl-developer.github.io/rimac/assets/svgs/Ilustracion-mobile.svg" alt="greet"/>
 
                     </div>
 

@@ -33,7 +33,7 @@ export const PlanScreen = () => {
                         (isBrowser) && 
                                     <Link to="/">
                                         <div className="AutoSceeen_Back">
-                                            <img src="/assets/svgs/back_arrow_2.svg" alt="arrow"/>
+                                            <img src="https://axl-developer.github.io/rimac/assets/svgs/back_arrow_2.svg" alt="arrow"/>
                                             <span>VOLVER</span>
                                         </div>
                                     </Link>

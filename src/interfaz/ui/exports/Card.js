@@ -9,7 +9,7 @@ export const Card = () => {
                 <span className="blue">editar</span>
             </div>
 
-            <img src="/assets/svgs/person_plan.svg" alt="" />
+            <img src="https://axl-developer.github.io/rimac//assets/svgs/person_plan.svg" alt="" />
         </div>
     )
 }

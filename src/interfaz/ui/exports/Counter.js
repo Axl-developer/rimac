@@ -9,13 +9,13 @@ export const Counter = ({counter,setCounter}) => {
     return (
         <div className="Counter">
             <button onClick={() => {subtract()}} className="btn">
-                <img src="/assets/svgs/less.svg" alt =""/>
+                <img src="https://axl-developer.github.io/rimac//assets/svgs/less.svg" alt =""/>
             </button>
 
             <span>$ {count}</span>
 
             <button onClick={() => {add()}} className="btn">
-                <img src="/assets/svgs/higher.svg" alt =""/>
+                <img src="https://axl-developer.github.io/rimac//assets/svgs/higher.svg" alt =""/>
             </button>
         </div>
     )

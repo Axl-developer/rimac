@@ -56,7 +56,7 @@ export const AutoSceen = () => {
                             (isBrowser) && 
                                         <Link to="/">
                                             <div className="AutoSceeen_Back">
-                                                <img src="/assets/svgs/back_arrow_2.svg" alt="arrow"/>
+                                                <img src="https://axl-developer.github.io/rimac/assets/svgs/back_arrow_2.svg" alt="arrow"/>
                                                 <span>VOLVER</span>
                                             </div>
                                         </Link>
@@ -79,7 +79,7 @@ export const AutoSceen = () => {
 
                                 <div className="AutoScreen_modelo_Mobile">
                                     <div>
-                                        <img src="/assets/svgs/card.svg" alt="auto"/>
+                                        <img src="https://axl-developer.github.io/rimac/assets/svgs/card.svg" alt="auto"/>
                                     </div>
 
                                     <div className="AutoScreen_left">

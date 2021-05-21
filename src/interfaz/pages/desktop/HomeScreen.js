@@ -10,7 +10,7 @@ export const HomeScreen = () => {
             
             <div className="HomeScreen__Right">
 
-                <img src="/assets/svgs/Illustracion-desktop.svg" alt="greet"/>
+                <img src="https://axl-developer.github.io/rimac/assets/svgs/Illustracion-desktop.svg" alt="greet"/>
 
                 <div className="HomeScreen__Greeting_Greet">
                     <span className="HomeScreen__Greeting_New">
