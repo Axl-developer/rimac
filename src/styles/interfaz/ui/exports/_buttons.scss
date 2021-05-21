@@ -21,3 +21,9 @@
     text-align: center;
 
 }
+
+@media (min-width:760px) {
+    .btn{
+        max-width: 192px;
+    }
+}

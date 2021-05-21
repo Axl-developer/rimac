@@ -6,6 +6,9 @@
     padding: 8px 16px;
     position: relative;
     margin-top: 16px;
+    min-width: 296px;
+    max-width: 384px;
+    width: 100%;
 
     span{
         font-size: 16px;
@@ -27,7 +30,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    height: 300px;
+    max-height: 300px;
     width: 100%;
     background:#fff;
     border: 1px solid #F0F2FA;
@@ -41,4 +44,14 @@
     font-size: 16px;
     line-height: 24px;
     color: #494F66;
+}
+
+#Select_home{
+    margin: 0;
+    min-width: auto;
+    width: auto;
+    max-width: none;
+    border:none;
+    display: flex;
+    align-items: center;
 }

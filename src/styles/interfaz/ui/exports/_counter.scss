@@ -17,3 +17,13 @@
         color: #494F66;
     }
 }
+
+@media (min-width:760px) {
+    .Counter{
+        max-width: 160px;
+        margin: 0;
+        span{
+            margin: 0 11px;
+        }
+    }
+}

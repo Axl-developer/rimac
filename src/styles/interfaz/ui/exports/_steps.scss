@@ -1,0 +1,47 @@
+
+.Sidebar_Steps_item{
+    display: flex;
+    align-items: center;
+
+    span{
+        margin-left:16px;
+    }
+}
+.Sctep_circle{
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+}
+
+.active{
+    @extend .Sidebar_Steps_item;
+    .Sctep_circle{
+        
+        border: 1px solid #6F7DFF;
+        background: #6F7DFF;
+        color: #fff;
+    }
+    span{
+        color: #6F7DFF;
+    }
+}
+
+.disable{
+    @extend .Sidebar_Steps_item;
+    
+    .Sctep_circle{
+        background: none;
+        border: 1px solid #C5CBE0;
+        color: #C5CBE0;
+    }
+
+    span{
+        color: #A3ABCC;
+    }
+}

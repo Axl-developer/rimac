@@ -1,10 +1,21 @@
 import React, { useRef, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { useHistory } from 'react-router'
+import { getUser, login } from '../../../actions/auth'
 import { useForm } from '../../../hooks/useForm'
 import { Buttons } from './Buttons'
+import { Select } from './Select'
 
 export const Form = () => {
 
-    const {formValues, handleInputChange, Checkout, NoVoid} = useForm({
+    const dispatch = useDispatch()
+
+    const history = useHistory()
+
+    const docs = ["DNI","CE"]
+    const [Selects, setSelects] = useState("DNI")
+
+    const {formValues, handleInputChange} = useForm({
         
         n_doc:'',
         phone:'',
@@ -12,6 +23,8 @@ export const Form = () => {
     })
 
     const {n_doc,phone,n_plate} = formValues
+
+    const isCheck = useRef()
 
     const doc_num = useRef()
 
@@ -23,16 +36,16 @@ export const Form = () => {
 
     const [accept, setAccept] = useState(false)
 
-    const Check = (e) => {
+    const Check = async(e) => {
         e.preventDefault()
-       // es necesario Checkout
-        if(n_doc.length < 8 || phone.length < 8 || n_plate.length < 8){
-            
-            refs.map( r => (r.current.value.length < 8) ? r.current.className = "Form__input Red" :r.current.className = "Form__input")
-        }
-        else{
+        if(n_doc.length >= 8 && phone.length > 8 && n_plate.length > 6 && isCheck.current.checked === true){
             refs.map( r => (r.current.className = "Form__input") )
             
+            dispatch(getUser(Selects,n_doc,phone,n_plate))
+            history.push('/auto')
+        }
+        else{
+            refs.map( r => (r.current.value.length < 8) ? r.current.className = "Form__input Red" :r.current.className = "Form__input")
         }
     }
     return (
@@ -41,12 +54,10 @@ export const Form = () => {
                 <div className="Form__body">
                     <h1 className="text_primary">Déjanos tus datos</h1>
                     <div className="Form__Select_content">
-                        <select className="Form__input">
-                            <option>DNI</option>
-                            <option>CE</option>
-                        </select>
+
+                        <Select options={docs} Selection={Selects} setSelection={setSelects} home={true}/>
                         
-                        <input ref={doc_num} value={n_doc} name="n_doc" className="Form__input" type="text" placeholder="Nro. de documento" onChange={handleInputChange}/>
+                        <input ref={doc_num} value={n_doc} name="n_doc" className="Form__input" type="number" placeholder="Nro. de documento" onChange={handleInputChange}/>
                     </div>
                     <input
                         ref={num_phone}
@@ -71,7 +82,7 @@ export const Form = () => {
 
                 <div className="Form__Foot">
                     <div className="Form__Foot__check">
-                        <input value={accept} onClick={() => setAccept(!accept)}  type="checkbox"/> 
+                        <input ref={isCheck} value={accept} onClick={() => setAccept(!accept)}  type="checkbox"/> 
                         <span>Acepto la <a className="External_link" href="#">Política de Protecciòn de Datos Personales</a> y los <a className="External_link" href="#">Términos y Condiciones.</a></span>
                     </div>
                     <div className="Form__Foot__Button">

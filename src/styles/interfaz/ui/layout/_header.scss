@@ -15,6 +15,9 @@
         color: #676F8F;
     }
 }
+.Header__question{
+    display: none;
+}
 .Header__call{
     
     font-size: 14px;
@@ -49,4 +52,10 @@
     padding:  20px 32px;
     border-bottom: 1px solid #E4E8F7;
     
+}
+
+@media (min-width:760px){
+    .Header__question{
+        display: block;
+    }
 }

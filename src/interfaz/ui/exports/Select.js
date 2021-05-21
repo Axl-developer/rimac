@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export const Select = ({options,Selection,setSelection}) => {
+export const Select = ({options,Selection,setSelection,home= false}) => {
 
     const [Active, setActive] = useState(false)
 
@@ -9,7 +9,7 @@ export const Select = ({options,Selection,setSelection}) => {
         setActive(false)
     }
     return (
-        <div className="Select">
+        <div id={(home)?"Select_home":""} className="Select">
 
             <div className="Select_selection" onClick={() => {setActive(!Active)}}>
                 <span>{Selection}</span>
@@ -28,6 +28,7 @@ export const Options = ({Selected,options}) => {
         <div className="Options">
             {options.map( o => (
                 <div
+                    key={o}
                     onClick={() => Selected(o)} 
                     className="Options_item">
                     {o}

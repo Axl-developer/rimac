@@ -42,13 +42,15 @@
     .Form__input{
         margin: 0;
         border-radius: 0;
-        border: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: none;
     }
     select{
         padding-right: 20px;
     }
     input{
-        border-left: 1px solid #C5CBE0 !important;
+        border-left: 1px solid #C5CBE0 ;
         width: 100%;
     }
     #Red{

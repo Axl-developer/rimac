@@ -1,7 +1,25 @@
+.AutoScreen_Content{
+    display: flex;
+}
 .AutoScreen_stepOne{
     padding: 40px 32px;
+    max-width: 674px;
+    margin: 0 auto;
 }
+.AutoSceeen_Back{
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
 
+    span{
+        margin-left: 16px;
+        letter-spacing: 0.6px;
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #A3ABCC;
+    }
+}
 .AutoScreen_stepOne_title{
     font-size: 28px;
     line-height: 36px;
@@ -18,12 +36,30 @@
     color: #676F8F;
     margin-bottom: 16px;
 }
-
+.AutoScreen_SelectsContent{
+    min-width: 296px;
+    max-width: 384px;
+    width: 100%;
+}
 .AutoScreen_modelo{
     background: #F7F8FC;
     border-radius: 8px;
     padding: 19px;
     margin-top: 24px;
+    max-width: 224px;
+}
+.AutoScreen_modelo_help{
+    padding-bottom: 16px;
+    border-bottom: 1px solid #E4E8F7;
+    margin-bottom: 16px;
+    color: #494F66;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    display: none;
+}
+.AutoScreen_modelo_Mobile{
     display: flex;
     justify-content: space-around;
 }
@@ -35,6 +71,7 @@
     span{
         font-size: 14px;
         line-height: 24px;
+        letter-spacing: 0.2px;
         color: #676F8F;
     }
 
@@ -50,7 +87,8 @@
 }
 
 .AutoScreen_Question{
-    margin: 32px auto;
+    margin: 32px 0;
+    max-width: 384px;
     
     span{
         font-size: 16px;
@@ -79,6 +117,7 @@
     display: flex;
     flex-direction: column;
     text-align: left;
+    max-width: 384px;
     h3{
         font-size: 16px;
         line-height: 24px;
@@ -111,4 +150,64 @@
         letter-spacing: 0.2px;
         color: #A3ABCC;
     }
+}
+
+@media (min-width:760px) {
+    .AutoScreen_stepOne{
+        padding: 40px 0px;
+    }
+    .AutoScreen_SelectsContent{
+        width: 384px;
+    }
+    .AutoScreen_Options{
+        display: flex;
+        justify-content: space-between;
+    }
+    .AutoScreen_Question{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin: 40px 0;
+    }
+    .AutoScreen_Question_answers{
+        margin: 0;
+    }
+    .AutoScreen_Price{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    .AutoScreen_Footer{
+        display: none;
+    }
+    .AutoScreen_modelo{
+        background: none;
+        margin-left: 30px;
+        width: 100%;
+    }
+    .AutoScreen_modelo_help{
+        display: block;
+    }
+    .AutoScreen_modelo_Mobile{
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .AutoScreen_left{
+        margin-right: 30px;
+    }
+}
+
+
+//plan
+.Autoscreen__Head_content{
+    background: #F7F8FC;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 32px 52px;
 }

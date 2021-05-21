@@ -1,0 +1,36 @@
+.Card{
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 24px;
+    padding-right: 130px;
+    margin-top: 40px;
+    position: relative;
+    filter: drop-shadow(0px 0px 10px rgba(163, 171, 204, 0.12));
+    max-width: 152px;
+    span{
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        color: #A3ABCC;
+    }
+    h2{
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        color: #494F66;
+        font-weight: 400;
+    }
+    img{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .blue{
+        font-size: 10px;
+        line-height: 16px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        color: #6F7DFF;
+    }
+}
